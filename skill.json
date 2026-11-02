@@ -1,0 +1,25 @@
+{
+  "name": "genpark-personal-agent-circadian-ocular-lux-luxmeter-entrainment-skill",
+  "version": "1.0.0",
+  "description": "Calculates CIE S 026 melanopic equivalent daylight illuminance (melanopic EDI), ipRGC circadian phase shifting, and schedules daily solar zeitgeber windows.",
+  "tools": [
+    {
+      "name": "calculate_melanopic_edi_and_circadian_drive",
+      "description": "Calculates Melanopic Equivalent Daylight Illuminance (melanopic EDI), PRC phase shift, and SCN drive.",
+      "parameters": {
+        "photopic_lux": "float (default 12000.0)",
+        "light_source_spectrum": "string (default 'direct_sunlight')",
+        "exposure_duration_minutes": "float (default 25.0)",
+        "time_since_waking_hours": "float (default 0.5)"
+      }
+    },
+    {
+      "name": "prescribe_daily_solar_zeitgeber_schedule",
+      "description": "Schedules morning solar anchoring, daytime working illumination, and evening low-lux cutoffs.",
+      "parameters": {
+        "wake_time_24h": "float (default 6.5)",
+        "planned_sleep_time_24h": "float (default 22.5)"
+      }
+    }
+  ]
+}
